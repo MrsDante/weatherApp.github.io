@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  background-image: url('./images/mCold.jpg');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+  padding: 50px;
+}
+
+.app.warm {
+  background-image: url('./images/m.png');
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.4 ease-out;
+}
+
+.search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 0 0 35px;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: 5px 5px rgba(39, 35, 35, 0.3);
+  border-radius: 40px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: .5px .5px rgb(37, 39, 39);
+  border-radius: 40px;
+  color: white;
+  text-align: center;
+}
+
+.search-bar:focus {
+  background-color: white;
+}
+
+.date {
+  color: white;
+  font-size: medium;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: .5px .5px rgb(90, 100, 100);
+}
+
+.city {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px auto;
+  text-align: center;
+  text-shadow: .5px .5px rgb(37, 39, 39);
+}
+
+.temp {
+  position: relative;
+  display: inline-block;
+  font-size: 80px;
+  margin: 20px auto 0px;
+  background-color: rgba(255,255,255,0.5);
+  box-shadow: .5px .5px rgb(37, 39, 39);
+  border-radius: 40px;
+  padding: 40px 60px;
+  color: white;
+  text-align: center;
+}
+
+.condition {
+  position: relative;
+  display: block;
+  margin: 25px auto 80px;
+  padding: 15px 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
