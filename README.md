@@ -10,6 +10,8 @@ A simple weather app
 
 В зависимости от температуры будет так же меняться фоновое изображение
 
+![hippo](https://j.gifs.com/GRr6DQ.gif)
+
 
 ## Available Scripts
 In the project directory, you can run:
