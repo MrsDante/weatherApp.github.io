@@ -10,6 +10,21 @@ function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
+  const [cuerW, setC] = useState({});
+
+  const weatherUrlForMsc = 'https://api.openweathermap.org/data/2.5/forecast?q=Moscow&lang=ru&units=metric&APPID=ac141d909f3a6c7b97ef120ae484148a';
+  const nwq = 'https://api.openweathermap.org/data/2.5/forecast?q=Moscow&lang=ru&units=metric&APPID=ac141d909f3a6c7b97ef120ae484148a';
+
+  const search3 = () => {
+      fetch(`${nwq}`)
+      .then(res => res.json())
+      .then(result => {
+        setC(result);
+        //setQuery('');
+        console.log(result)}
+        );
+   }
+ 
   const search = evt => {
    if (evt.key === 'Enter') {
      fetch(`${api.url}weather?q=${query}&appid=${api.key}&units=metric`)
@@ -56,7 +71,8 @@ function App() {
           placeholder="Enter your city"
           onChange={e => setQuery(e.target.value)}
           value={query}
-          onKeyPress={search}>
+          onKeyPress={search}
+          onMouseOver={search3}>
         </input>
         <button onClick={searchOnClick} className="btn">Узнать!</button>
         {(typeof weather.main != "undefined") ? (
@@ -72,7 +88,7 @@ function App() {
           </div>
         </div>
         </div>
-        ) :('')}
+        ) : <div>{cuerW.name}</div>}
       </main>
     </div>
   );
